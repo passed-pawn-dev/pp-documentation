@@ -13,6 +13,16 @@ Projekt powstał jako praca dyplomowa (Uniwersytet Gdański, 2025).
 | Pełna dokumentacja (praca dyplomowa, PL): wymagania, UI, architektura, DevOps, AI | [`passed_pawn_documentation_pl.pdf`](passed_pawn_documentation_pl.pdf) |
 | Nagrania głównych ścieżek w aplikacji (poniżej) | [`videos/`](videos) |
 
+## Kod źródłowy
+
+| Repozytorium | Zawartość |
+|---|---|
+| [pp-frontend](https://github.com/passed-pawn-dev/pp-frontend) | Aplikacja SPA dla trenera i ucznia (Angular 19) |
+| [pp-backend](https://github.com/passed-pawn-dev/pp-backend) | REST API i logika szachowa (.NET 8, PostgreSQL) |
+| [pp-ai](https://github.com/passed-pawn-dev/pp-ai) | Asystent AI w czacie: RAG na dokumentach (FastAPI, LangChain, Chroma, Mistral) |
+| [pp-keycloak](https://github.com/passed-pawn-dev/pp-keycloak) | Keycloak z własnym motywem stron logowania i rejestracji |
+| [pp-dev-ops](https://github.com/passed-pawn-dev/pp-dev-ops) | Wdrożenie: charty Helm na Kubernetes, pipeline'y CI/CD w Jenkinsie, konfiguracja Keycloaka w Terraformie |
+
 ## Nagrania demo
 
 Krótkie filmy (30 s–2 min) nagrane automatycznie Playwrightem. Mają widoczny kursor i napisy
