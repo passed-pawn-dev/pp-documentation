@@ -11,6 +11,7 @@ The project was created as a bachelor's thesis (University of Gdańsk, 2025).
 | What | Where |
 |---|---|
 | Full documentation (thesis, in Polish): requirements, UI, architecture, DevOps, AI | [`passed_pawn_documentation_pl.pdf`](passed_pawn_documentation_pl.pdf) |
+| English translation of the full documentation (unofficial, translated by Claude — the Polish version is the original) | [`passed_pawn_documentation_eng.pdf`](passed_pawn_documentation_eng.pdf) |
 | Recordings of the main user flows (below) | [`videos/`](videos) |
 
 ## Source code
