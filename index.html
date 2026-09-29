@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passed Pawn – demo videos</title>
+  <meta name="description" content="Recordings of the main user flows of Passed Pawn, an educational chess platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f4f6;
+      --surface: #ffffff;
+      --text: #17151f;
+      --muted: #5d5a6b;
+      --border: #e4e2ea;
+      --accent: #6015f4;
+      --accent-soft: #efe8fe;
+      --shadow: 0 1px 2px rgba(20, 10, 40, .06), 0 4px 16px rgba(20, 10, 40, .06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121018;
+        --surface: #1c1a24;
+        --text: #eeecf4;
+        --muted: #a6a2b6;
+        --border: #2d2a38;
+        --accent: #a77dff;
+        --accent-soft: #2a2140;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 16px rgba(0, 0, 0, .3);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 Poppins, "Segoe UI", system-ui, sans-serif;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 48px 0 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--accent); font-weight: 600; letter-spacing: .02em; }
+    .brand svg { width: 22px; height: 22px; }
+    h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 12px 0 8px; }
+    .lead { color: var(--muted); max-width: 720px; margin: 0; }
+    .lead a { color: var(--accent); }
+    nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
+    nav.toc a {
+      text-decoration: none; color: var(--text); background: var(--surface); border: 1px solid var(--border);
+      padding: 6px 14px; border-radius: 999px; font-size: 14px;
+    }
+    nav.toc a:hover { border-color: var(--accent); color: var(--accent); }
+    section { padding: 24px 0 8px; }
+    h2 { font-size: 22px; margin: 0 0 4px; }
+    .section-desc { color: var(--muted); margin: 0 0 16px; font-size: 15px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 20px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+      box-shadow: var(--shadow); scroll-margin-top: 16px; transition: border-color .3s, box-shadow .3s;
+    }
+    .card.target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow); }
+    .card video { display: block; width: 100%; aspect-ratio: 16 / 10; background: #000; }
+    .card .body { padding: 14px 16px 16px; }
+    .card .title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .card h3 { margin: 0; font-size: 17px; }
+    .card .meta { color: var(--muted); font-size: 13px; white-space: nowrap; display: flex; gap: 10px; align-items: center; }
+    .card .meta a { color: var(--muted); text-decoration: none; }
+    .card .meta a:hover { color: var(--accent); }
+    .card p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+    .note {
+      margin: 32px 0 0; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--surface);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 14px;
+    }
+    footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="5" r="3"/><path d="M9 9h6l1.5 8h-9z"/><rect x="6" y="18" width="12" height="3" rx="1"/></svg>
+        Passed Pawn
+      </div>
+      <h1>Demo videos</h1>
+      <p class="lead">
+        Recordings of the main user flows of Passed Pawn, an educational chess platform where coaches build
+        courses and students learn from them. The clips were recorded automatically with Playwright and have
+        captions describing each step. Documentation and source code:
+        <a href="https://github.com/passed-pawn-dev/pp-documentation">pp-documentation</a>.
+      </p>
+      <nav class="toc" id="toc"></nav>
+    </header>
+    <main id="sections"></main>
+    <p class="note">
+      Start with the two full flows. The other videos each cover one type of lesson element: first how the coach
+      creates it, then how the student uses it. In the recordings the payment and the AI assistant are simulated:
+      no real Stripe transaction is made, and the assistant's answers are prepared in advance instead of being
+      generated by the language model.
+    </p>
+    <footer>Passed Pawn · bachelor's thesis, University of Gdańsk, 2025</footer>
+  </div>
+
+  <script>
+    const SECTIONS = [
+      {
+        id: 'coach', title: 'Coach', desc: 'Creating a course and every type of lesson element.',
+        videos: [
+          ['e2e_coach', 'coach', 'Full coach flow', '1:36', 'Registration → login → new course → thumbnail → lessons'],
+          ['create_puzzle', 'coach', 'Creating a puzzle', '0:45', 'Position loaded from FEN and the solution moves played on the board'],
+          ['create_quiz', 'coach', 'Creating a quiz', '0:55', 'Board, question, answers, hint, explanation and preview'],
+          ['create_example', 'coach', 'Creating an example', '1:27', 'A 3-step example with arrows and highlighted squares'],
+          ['create_video', 'coach', 'Uploading a video', '0:42', 'Adding a lesson video with a title and description']
+        ]
+      },
+      {
+        id: 'student', title: 'Student', desc: 'Finding a course, getting access and learning from it.',
+        videos: [
+          ['e2e_student', 'student', 'Full student flow', '1:56', 'Registration → course catalogue with filters → course details (coach, lessons, reviews) → free course → learning → review'],
+          ['use_puzzle', 'student', 'Solving a puzzle', '0:36', 'A wrong move gets reverted, then the correct solution'],
+          ['use_quiz', 'student', 'Answering a quiz', '0:35', 'Hint, wrong answer, reset, correct answer'],
+          ['use_example', 'student', 'Studying an example', '0:31', 'Stepping through the example'],
+          ['use_video', 'student', 'Watching a video', '0:28', 'Playing a lesson video'],
+          ['buy_course', 'student', 'Buying a course', '0:54', 'Paying for a course by card (Stripe) → access granted → lessons unlocked']
+        ]
+      },
+      {
+        id: 'other', title: 'Other', desc: 'Features available to every user.',
+        videos: [
+          ['ai_assistant', 'other', 'AI assistant', '1:01', 'The chat assistant answering a visitor, a student and a coach, each based on the help for their role']
+        ]
+      }
+    ];
+
+    const toc = document.getElementById('toc');
+    const main = document.getElementById('sections');
+    for (const s of SECTIONS) {
+      toc.insertAdjacentHTML('beforeend', `<a href="#${s.id}">${s.title}</a>`);
+      const cards = s.videos.map(([id, dir, title, len, desc]) => `
+        <article class="card" id="${id}">
+          <video controls preload="none" playsinline poster="videos/thumbnails/${id}.jpg">
+            <source src="videos/${dir}/${id}.mp4" type="video/mp4">
+          </video>
+          <div class="body">
+            <div class="title-row">
+              <h3>${title}</h3>
+              <span class="meta"><span>${len}</span><a href="#${id}" title="Link to this video">#</a></span>
+            </div>
+            <p>${desc}</p>
+          </div>
+        </article>`).join('');
+      main.insertAdjacentHTML('beforeend', `
+        <section id="${s.id}">
+          <h2>${s.title}</h2>
+          <p class="section-desc">${s.desc}</p>
+          <div class="grid">${cards}</div>
+        </section>`);
+    }
+
+    // only one video plays at a time
+    document.addEventListener('play', (e) => {
+      document.querySelectorAll('video').forEach((v) => { if (v !== e.target) v.pause(); });
+    }, true);
+
+    // highlight the video a README link points to (e.g. #use_quiz)
+    function highlight() {
+      document.querySelectorAll('.card.target').forEach((c) => c.classList.remove('target'));
+      const el = location.hash && document.getElementById(location.hash.slice(1));
+      if (el && el.classList.contains('card')) {
+        el.classList.add('target');
+        el.scrollIntoView({ block: 'center' });
+      }
+    }
+    window.addEventListener('hashchange', highlight);
+    highlight();
+  </script>
+</body>
+</html>

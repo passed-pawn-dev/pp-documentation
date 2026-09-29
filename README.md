@@ -12,7 +12,7 @@ The project was created as a bachelor's thesis (University of Gdańsk, 2025).
 |---|---|
 | Full documentation (thesis, in Polish): requirements, UI, architecture, DevOps, AI | [`passed_pawn_documentation_pl.pdf`](passed_pawn_documentation_pl.pdf) |
 | English translation of the full documentation (unofficial, translated by Claude — the Polish version is the original) | [`passed_pawn_documentation_eng.pdf`](passed_pawn_documentation_eng.pdf) |
-| Recordings of the main user flows (below) | [`videos/`](videos) |
+| Recordings of the main user flows (below) | [`videos/`](videos), watchable in the [video gallery](https://passed-pawn-dev.github.io/pp-documentation/) ([`index.html`](index.html)) |
 
 ## Source code
 
@@ -27,34 +27,35 @@ The project was created as a bachelor's thesis (University of Gdańsk, 2025).
 ## Demo videos
 
 Short clips (30 s–2 min) recorded automatically with Playwright, with a visible cursor and
-captions describing each step. Click a thumbnail to open the video.
+captions describing each step. Watch them in the **[video gallery](https://passed-pawn-dev.github.io/pp-documentation/)** (GitHub Pages) -
+click a thumbnail or a title to open that video there. The MP4 files are in [`videos/`](videos).
 
 ### Coach — [`videos/coach/`](videos/coach)
 
 | | Video | What it shows |
 |---|---|---|
-| <a href="videos/coach/e2e_coach.mp4"><img src="videos/thumbnails/e2e_coach.jpg" width="240"></a> | **Full coach flow** · 1:36 | Registration → login → new course → thumbnail → lessons |
-| <a href="videos/coach/create_puzzle.mp4"><img src="videos/thumbnails/create_puzzle.jpg" width="240"></a> | **Puzzle** · 0:45 | Creating a puzzle: position (FEN) + solution moves |
-| <a href="videos/coach/create_quiz.mp4"><img src="videos/thumbnails/create_quiz.jpg" width="240"></a> | **Quiz** · 0:55 | Board, question, answers, hint, explanation, preview |
-| <a href="videos/coach/create_example.mp4"><img src="videos/thumbnails/create_example.jpg" width="240"></a> | **Example** · 1:27 | A 3-step example with arrows and highlighted squares |
-| <a href="videos/coach/create_video.mp4"><img src="videos/thumbnails/create_video.jpg" width="240"></a> | **Video** · 0:42 | Uploading a lesson video |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#e2e_coach"><img src="videos/thumbnails/e2e_coach.jpg" width="240"></a> | **[Full coach flow](https://passed-pawn-dev.github.io/pp-documentation/#e2e_coach)** · 1:36 | Registration → login → new course → thumbnail → lessons |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#create_puzzle"><img src="videos/thumbnails/create_puzzle.jpg" width="240"></a> | **[Puzzle](https://passed-pawn-dev.github.io/pp-documentation/#create_puzzle)** · 0:45 | Creating a puzzle: position (FEN) + solution moves |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#create_quiz"><img src="videos/thumbnails/create_quiz.jpg" width="240"></a> | **[Quiz](https://passed-pawn-dev.github.io/pp-documentation/#create_quiz)** · 0:55 | Board, question, answers, hint, explanation, preview |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#create_example"><img src="videos/thumbnails/create_example.jpg" width="240"></a> | **[Example](https://passed-pawn-dev.github.io/pp-documentation/#create_example)** · 1:27 | A 3-step example with arrows and highlighted squares |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#create_video"><img src="videos/thumbnails/create_video.jpg" width="240"></a> | **[Video](https://passed-pawn-dev.github.io/pp-documentation/#create_video)** · 0:42 | Uploading a lesson video |
 
 ### Student — [`videos/student/`](videos/student)
 
 | | Video | What it shows |
 |---|---|---|
-| <a href="videos/student/e2e_student.mp4"><img src="videos/thumbnails/e2e_student.jpg" width="240"></a> | **Full student flow** · 1:56 | Registration → course catalogue with filters → course details (coach, lessons, reviews) → free course → learning → review |
-| <a href="videos/student/use_puzzle.mp4"><img src="videos/thumbnails/use_puzzle.jpg" width="240"></a> | **Solving a puzzle** · 0:36 | A wrong move gets reverted, then the correct solution |
-| <a href="videos/student/use_quiz.mp4"><img src="videos/thumbnails/use_quiz.jpg" width="240"></a> | **Quiz** · 0:35 | Hint, wrong answer, reset, correct answer |
-| <a href="videos/student/use_example.mp4"><img src="videos/thumbnails/use_example.jpg" width="240"></a> | **Example** · 0:31 | Stepping through the example |
-| <a href="videos/student/use_video.mp4"><img src="videos/thumbnails/use_video.jpg" width="240"></a> | **Video** · 0:28 | Watching a lesson video |
-| <a href="videos/student/buy_course.mp4"><img src="videos/thumbnails/buy_course.jpg" width="240"></a> | **Buying a course** · 0:54 | Paying for a course by card (Stripe) → access granted → lessons unlocked |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#e2e_student"><img src="videos/thumbnails/e2e_student.jpg" width="240"></a> | **[Full student flow](https://passed-pawn-dev.github.io/pp-documentation/#e2e_student)** · 1:56 | Registration → course catalogue with filters → course details (coach, lessons, reviews) → free course → learning → review |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#use_puzzle"><img src="videos/thumbnails/use_puzzle.jpg" width="240"></a> | **[Solving a puzzle](https://passed-pawn-dev.github.io/pp-documentation/#use_puzzle)** · 0:36 | A wrong move gets reverted, then the correct solution |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#use_quiz"><img src="videos/thumbnails/use_quiz.jpg" width="240"></a> | **[Quiz](https://passed-pawn-dev.github.io/pp-documentation/#use_quiz)** · 0:35 | Hint, wrong answer, reset, correct answer |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#use_example"><img src="videos/thumbnails/use_example.jpg" width="240"></a> | **[Example](https://passed-pawn-dev.github.io/pp-documentation/#use_example)** · 0:31 | Stepping through the example |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#use_video"><img src="videos/thumbnails/use_video.jpg" width="240"></a> | **[Video](https://passed-pawn-dev.github.io/pp-documentation/#use_video)** · 0:28 | Watching a lesson video |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#buy_course"><img src="videos/thumbnails/buy_course.jpg" width="240"></a> | **[Buying a course](https://passed-pawn-dev.github.io/pp-documentation/#buy_course)** · 0:54 | Paying for a course by card (Stripe) → access granted → lessons unlocked |
 
 ### Other — [`videos/other/`](videos/other)
 
 | | Video | What it shows |
 |---|---|---|
-| <a href="videos/other/ai_assistant.mp4"><img src="videos/thumbnails/ai_assistant.jpg" width="240"></a> | **AI assistant** · 1:01 | The chat assistant answering a visitor, a student and a coach, each based on the help for their role |
+| <a href="https://passed-pawn-dev.github.io/pp-documentation/#ai_assistant"><img src="videos/thumbnails/ai_assistant.jpg" width="240"></a> | **[AI assistant](https://passed-pawn-dev.github.io/pp-documentation/#ai_assistant)** · 1:01 | The chat assistant answering a visitor, a student and a coach, each based on the help for their role |
 
 > Start with the two full flows (`e2e_coach`, `e2e_student`). The other videos each cover one
 > type of lesson element: first how the coach creates it, then how the student uses it.
